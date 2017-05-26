@@ -1,0 +1,22 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Meme extends Model
+{
+    //ist das so wirklich nötig? Sollte automatisch die richtige table nehmen.
+    //protected $table = 'memes';
+    
+    protected $fillable = [
+    	'image_url',
+    	'title',
+    	'description',
+    	'upvotes',
+    	'downvotes',
+    	'is_flagged',
+    	'user_id',
+    	'group_id',
+    ];
+}

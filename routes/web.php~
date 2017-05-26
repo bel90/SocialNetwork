@@ -19,10 +19,6 @@ Route::get('/newmeme', function () {
     return view('newmeme');
 });
 
-//Posten eines Memes:
-//Die Controllerfunktion hat noch Fehler/ ist unvollständig
-Route::post('/newmeme', 'MemeController@store');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
