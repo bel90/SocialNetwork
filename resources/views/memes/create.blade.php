@@ -10,7 +10,7 @@ fest legen zu können.
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Create a new Meme</title>
-        
+
     </head>
     <body>
     	<form method="post" name="addmeme">
@@ -18,19 +18,19 @@ fest legen zu können.
         	<table>
         		<tr>
         			<td> Title:
-        			<td> <input id="title" name="title" type="text" placeholder="title, max. 150 character" maxlength="150" required />
+        			<td> <input id="meme_title" name="meme_title" type="text" placeholder="title, max. 150 character" maxlength="150" required />
         		</tr>
-        		
+
         		<tr>
         			<td> Picture:
-        			<td> <input id="picture" name="picture" type="file">
+        			<td> <input id="picture" name="picture" type="file" enctype="multipart/form-data">
         		</tr>
-        		
+
         		<tr>
         			<td> Description:
         			<td> <input id="description" name="description" type="text" placeholder="not required"/>
         		</tr>
-        		
+
         		<tr>
         			<td> Group:
         			<!-- Soll optional sein, per Dropdownmenu, nur Gruppen möglich in denen Mitglied -->

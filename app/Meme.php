@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Meme extends Model
 {
-    
+    //Unter fillable nur was vom Nutzer selbst eingegeben werden kann
     protected $fillable = [
     	'image_url',
-    	'title',
+    	'meme_title',
     	'description',
-    	'upvotes',
-    	'downvotes',
-    	'is_flagged',
-    	'user_id',
+    	//'upvotes',
+    	//'downvotes',
+    	//'is_flagged',
+    	//'user_id',
     	'group_id',
     ];
 }

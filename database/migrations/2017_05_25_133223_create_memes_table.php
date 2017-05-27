@@ -15,20 +15,17 @@ class CreateMemesTable extends Migration
     {
         Schema::create('memes', function (Blueprint $table) {
             $table->increments('id');
-            
-            //Gibt es besseren Datentypen um die url eines Bildes zu speicher?
-            //Ist die Speicherung der url wirklich die beste Möglichkeit?
             $table->string('image_url');
-            $table->string('title', 150);
+            $table->string('meme_title');
             $table->text('description');
             $table->integer('upvotes')->unsigned()->default(0);
             $table->integer('downvotes')->unsigned()->default(0);
             $table->boolean('is_flaged')->default(false);
-            
+
             //Gibt es evtl einen beseren Wert als Integer um auf die user_id zu verweisen?
             $table->integer('user_id');
-            
-            //Was wenn Meme mehreren Gruppen zugeteilt werden soll, gibt es 
+
+            //Was wenn Meme mehreren Gruppen zugeteilt werden soll, gibt es
             //Array-Typen oder ähnliches?
             $table->integer('group_id');
             $table->timestamps();

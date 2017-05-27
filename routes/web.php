@@ -1,5 +1,7 @@
 <?php
 
+use App\Meme;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,11 +18,19 @@ Route::get('/', function () {
 });
 
 Route::get('/newmeme', function () {
-    return view('newmeme');
+    return view('memes/create');
+});
+
+//Für Testzwecke:
+Route::get('/show_all', function() {
+  $memes = Meme::orderBy('id')->get();
+
+  return view('memes/show_all_title', ['memes' => $memes]);
 });
 
 //Posten eines Memes:
-//Die Controllerfunktion hat noch Fehler/ ist unvollständig
+//Bilder können noch nicht erfolgreich abgespeichert werden
+//Grundfuktionalität steht ansonsten
 Route::post('/newmeme', 'MemeController@store');
 
 Auth::routes();
